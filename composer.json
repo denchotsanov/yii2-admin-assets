@@ -1,0 +1,15 @@
+{
+    "name": "denchotsanov/yii2-admin-assets",
+    "type": "yii2-extension",
+    "require": {
+        "yiisoft/yii2": "2.0.15.1",
+        "yiisoft/yii2-bootstrap": "^2.0",
+        "almasaeed2010/adminlte": "^2.4"
+    },
+    "authors": [
+        {
+            "name": "dencho",
+            "email": "tsanov.dencho@gmail.com"
+        }
+    ]
+}
