@@ -13,5 +13,10 @@
             "name": "Dencho Tsanov",
             "email": "tsanov.dencho@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "denchotsanov\\": ""
+        }
+    }
 }
