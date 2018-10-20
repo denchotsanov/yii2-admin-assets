@@ -20,6 +20,7 @@ class AdminLteAssets extends BaseAdminLteAsset
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
         'yii\bootstrap\BootstrapPluginAsset',
+        'denchotsanov\assets\FontAwesomeAsset'
     ];
 
     public $skin = '_all-skins';
