@@ -15,6 +15,7 @@ use yii\web\AssetBundle as BaseAdminAsset;
 
 class AdminAsset extends BaseAdminAsset
 {
+    public $sourcePath = '@vendor/denchotsanov/yii2-admin-assets/src';
     public $css = [
 
     ];
