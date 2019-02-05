@@ -15,6 +15,7 @@ namespace denchotsanov\widgets;
 use Yii;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 class Menu extends \yii\widgets\Menu
 {
