@@ -3,7 +3,6 @@
  *
  * @var string $content Return html content.
  */
-
 use denchotsanov\widgets\Alert;
 use yii\helpers\Html;
 use yii\helpers\Inflector;
