@@ -41,10 +41,10 @@ $menuItems = [
 ];
 
 $user = Yii::$app->user->identity;
-$avatar = $user->getAvatar() ? $user->getAvatar() : $directoryAsset . '/img/user2-160x160.jpg';
-$username = $user->getUsername() ? $user->getUsername() : 'Alexander Pierce';
-$statusIcon = $user->getUserOnlineIcon() ? $user->getUserOnlineIcon() : 'success';
-$statusLabel = $user->getUserOnlineLabel() ? $user->getUserOnlineLabel() : 'Online';
+$avatar = $directoryAsset . '/img/user2-160x160.jpg';
+$username = 'Alexander Pierce';
+$statusIcon = 'success';
+$statusLabel =  'Online';
 ?>
 <aside class="main-sidebar">
     <section class="sidebar">

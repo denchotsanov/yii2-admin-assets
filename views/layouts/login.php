@@ -1,12 +1,12 @@
 <?php
 
+use denchotsanov\assets\AdminAsset;
 use yii\helpers\Html;
-use denchotsanov\assets\AdminLteAssets;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-AdminLteAssets::register($this);
+AdminAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
