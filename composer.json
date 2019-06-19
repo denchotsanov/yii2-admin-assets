@@ -9,7 +9,6 @@
             "email": "tsanov.dencho@gmail.com"
         }
     ],
-    "prefer-stable": true,
     "require": {
         "php": "^7.0",
         "fxp/composer-asset-plugin":"^1.4.0",
