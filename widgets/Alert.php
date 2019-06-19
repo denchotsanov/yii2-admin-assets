@@ -1,7 +1,7 @@
 <?php
 
 
-namespace denchotsanov\widget;
+namespace denchotsanov\widgets;
 
 use yii\bootstrap\Alert as BootstrapAlert;
 use yii\bootstrap\Widget;
