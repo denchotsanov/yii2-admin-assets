@@ -36,10 +36,12 @@ class AdminLteAssets extends BaseAdminLteAsset
 
     public $sourcePath = '@vendor/almasaeed2010/adminlte/dist';
     public $css = [
-        'css/AdminLTE.min.css',
+        'css/adminlte.min.css',
+        'js/plugins/font-awesome/css/font-awesome.min.css'
     ];
     public $js = [
-        'js/adminlte.min.js'
+        'js/adminlte.min.js',
+
     ];
     public $depends = [
         'yii\web\YiiAsset',

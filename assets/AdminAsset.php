@@ -24,6 +24,5 @@ class AdminAsset extends BaseAdminAsset
     ];
     public $depends = [
         'denchotsanov\assets\AdminLteAssets',
-        'denchotsanov\assets\FontAwesomeAsset'
     ];
 }
