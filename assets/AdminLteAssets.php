@@ -2,6 +2,31 @@
 
 namespace denchotsanov\assets;
 
+/**
+ *  BODY TAG OPTIONS:
+ * =================
+ * |---------------------------------------------------------|
+ * | SKINS         | skin-blue                               |
+ * |               | skin-black                              |
+ * |               | skin-purple                             |
+ * |               | skin-yellow                             |
+ * |               | skin-red                                |
+ * |               | skin-green                              |
+ * |               | "skin-blue-light"                       |
+ * |               | "skin-black-light"                      |
+ * |               | "skin-red-light"                        |
+ * |               | "skin-yellow-light"                     |
+ * |               | "skin-purple-light"                     |
+ * |               | "skin-green-light"                      |
+ * |---------------------------------------------------------|
+ * |LAYOUT OPTIONS | fixed                                   |
+ * |               | layout-boxed                            |
+ * |               | layout-top-nav                          |
+ * |               | sidebar-collapse                        |
+ * |               | sidebar-mini                            |
+ * |---------------------------------------------------------|
+ *
+ */
 
 use yii\base\Exception;
 use yii\web\AssetBundle as BaseAdminLteAsset;
@@ -23,6 +48,7 @@ class AdminLteAssets extends BaseAdminLteAsset
     ];
 
     public $skin = '_all-skins';
+    public $layoutOption = 'sidebar-mini';
 
     /**
      * @inheritdoc
