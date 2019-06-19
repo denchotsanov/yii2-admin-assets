@@ -9,13 +9,12 @@
             "email": "tsanov.dencho@gmail.com"
         }
     ],
-    "prefer-stable": true,
     "require": {
         "php": "^7.0",
         "fxp/composer-asset-plugin":"^1.4.0",
         "yiisoft/yii2": "^2.0.15",
         "yiisoft/yii2-bootstrap": "^2.0",
-        "almasaeed2010/adminlte": "^2.4"
+        "almasaeed2010/adminlte": "v3.0.0-alpha.2"
     },
     "autoload": {
         "psr-4": {
