@@ -7,10 +7,10 @@ use yii\helpers\Html;
 
 $sortName = isset(Yii::$app->params['shortName']) ? Yii::$app->params['shortName'] : 'TS';
 $user = Yii::$app->user->identity;
-$avatar = !is_null($user->getAvatar()) ? $user->getAvatar() : $directoryAsset . '/img/user2-160x160.jpg';
-$username = !is_null($user->getUsername()) ? $user->getUsername() : 'Alexander Pierce';
-$statusIcon = !is_null($user->getUserOnlineIcon()) ? $user->getUserOnlineIcon() : 'success';
-$statusLabel = !is_null($user->getUserOnlineLabel()) ? $user->getUserOnlineLabel() : 'Online';
+$avatar =  $directoryAsset . '/img/user2-160x160.jpg';
+$username = 'Alexander Pierce';
+$statusIcon = 'success';
+$statusLabel = 'Online';
 
 ?>
 <header class="main-header">
