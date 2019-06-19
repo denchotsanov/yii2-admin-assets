@@ -241,7 +241,7 @@ $statusLabel = 'Online';
                                  alt="User Image"/>
                             <p>
                                 <?php echo $username; ?>
-                                <small>Member since <?php echo date('M. Y', $user->created_at); ?></small>
+                                <small>Member since <?php echo date('M. Y'); ?></small>
                             </p>
                         </li>
                         <!-- Menu Footer-->
