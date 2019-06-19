@@ -22,11 +22,13 @@
  *
  */
 
+
+use denchotsanov\assets\AdminAsset;
 use denchotsanov\helpers\ThemeHelper;
 use yii\helpers\Html;
 
 $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');
-
+AdminAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
     <!DOCTYPE html>
