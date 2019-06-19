@@ -5,12 +5,12 @@
 
 use yii\helpers\Html;
 
-$sortName = Yii::$app->params['shortName'] ? Yii::$app->params['shortName'] : 'TS';
+$sortName = isset(Yii::$app->params['shortName']) ? Yii::$app->params['shortName'] : 'TS';
 $user = Yii::$app->user->identity;
-$avatar = $user->getAvatar() ? $user->getAvatar() : $directoryAsset . '/img/user2-160x160.jpg';
-$username = $user->getUsername() ? $user->getUsername() : 'Alexander Pierce';
-$statusIcon = $user->getUserOnlineIcon() ? $user->getUserOnlineIcon() : 'success';
-$statusLabel = $user->getUserOnlineLabel() ? $user->getUserOnlineLabel() : 'Online';
+$avatar = !is_null($user->getAvatar()) ? $user->getAvatar() : $directoryAsset . '/img/user2-160x160.jpg';
+$username = !is_null($user->getUsername()) ? $user->getUsername() : 'Alexander Pierce';
+$statusIcon = !is_null($user->getUserOnlineIcon()) ? $user->getUserOnlineIcon() : 'success';
+$statusLabel = !is_null($user->getUserOnlineLabel()) ? $user->getUserOnlineLabel() : 'Online';
 
 ?>
 <header class="main-header">
