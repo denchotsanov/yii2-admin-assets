@@ -37,7 +37,14 @@ class AdminLteAssets extends BaseAdminLteAsset
     public $sourcePath = '@vendor/almasaeed2010/adminlte';
     public $css = [
         'dist/css/adminlte.min.css',
-        'plugins/fontawesome-free/css/all.min.css'
+        'plugins/fontawesome-free/css/all.min.css',
+        'plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css',
+        'plugins/icheck-bootstrap/icheck-bootstrap.min.css',
+        'plugins/jqvmap/jqvmap.min.css',
+        'plugins/jqvmap/jqvmap.min.css',
+        'plugins/overlayScrollbars/css/OverlayScrollbars.min.css',
+        'plugins/daterangepicker/daterangepicker.css',
+        'plugins/summernote/summernote-bs4.css',
     ];
     public $js = [
         'dist/js/adminlte.min.js',
