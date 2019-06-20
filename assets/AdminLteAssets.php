@@ -34,13 +34,13 @@ use yii\web\AssetBundle as BaseAdminLteAsset;
 class AdminLteAssets extends BaseAdminLteAsset
 {
 
-    public $sourcePath = '@vendor/almasaeed2010/adminlte/dist';
+    public $sourcePath = '@vendor/almasaeed2010/adminlte';
     public $css = [
-        'css/adminlte.min.css',
-        'js/plugins/font-awesome/css/font-awesome.min.css'
+        'dist/css/adminlte.min.css',
+        'plugins/fontawesome-free/css/all.min.css'
     ];
     public $js = [
-        'js/adminlte.min.js',
+        'dist/js/adminlte.min.js',
 
     ];
     public $depends = [
@@ -62,7 +62,7 @@ class AdminLteAssets extends BaseAdminLteAsset
             if (('_all-skins' !== $this->skin) && (strpos($this->skin, 'skin-') !== 0)) {
                 throw new Exception('Invalid skin specified');
             }
-            $this->css[] = sprintf('css/skins/%s.min.css', $this->skin);
+         //   $this->css[] = sprintf('css/skins/%s.min.css', $this->skin);
         }
         parent::init();
     }
