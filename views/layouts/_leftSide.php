@@ -46,6 +46,12 @@ $username = 'Alexander Pierce';
 ?>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <section class="sidebar">
+
+        <a href="#" class="brand-link">
+            <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                 style="opacity: .8">
+            <span class="brand-text font-weight-light"><?= Yii::$app->name; ?></span>
+        </a>
         <!-- Sidebar user panel -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
@@ -55,18 +61,6 @@ $username = 'Alexander Pierce';
                 <a href="#" class="d-block"><?php echo $username; ?></a>
             </div>
         </div>
-
-        <!-- search form -->
-        <form action="#" method="get" class="sidebar-form">
-            <div class="input-group">
-                <input type="text" name="q" class="form-control" placeholder="Search..."/>
-                <span class="input-group-btn">
-                <button type='submit' name='search' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
-              </span>
-            </div>
-        </form>
-        <!-- /.search form -->
         <nav class="mt-2">
             <?php echo Menu::widget([
                     'options' => $menuOptions,
