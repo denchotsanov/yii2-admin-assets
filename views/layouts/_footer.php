@@ -3,7 +3,7 @@
 $version = Yii::$app->version;
 ?>
 <footer class="main-footer">
-    <div class="pull-right hidden-xs">
+    <div class="float-right d-none d-sm-inline-block">
         <?php if($version): ?>
         <b>Version</b> <?php echo $version; ?>
         <?php endif; ?>

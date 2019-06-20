@@ -43,19 +43,16 @@ $menuItems = [
 $user = Yii::$app->user->identity;
 $avatar = $directoryAsset . '/img/user2-160x160.jpg';
 $username = 'Alexander Pierce';
-$statusIcon = 'success';
-$statusLabel =  'Online';
 ?>
-<aside class="main-sidebar">
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
     <section class="sidebar">
         <!-- Sidebar user panel -->
-        <div class="user-panel">
-            <div class="pull-left image">
-                <img src="<?php echo $avatar; ?>" class="img-circle" alt="User Image"/>
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+                <img src="<?php echo $avatar; ?>" class="img-circle elevation-2" alt="User Image"/>
             </div>
-            <div class="pull-left info">
-                <p><?php echo $username; ?></p>
-                <a href="#"><i class="fa fa-circle text-<?php echo $statusIcon; ?>"></i> <?php echo $statusLabel; ?></a>
+            <div class="info">
+                <a href="#" class="d-block"><?php echo $username; ?></a>
             </div>
         </div>
 
@@ -70,10 +67,12 @@ $statusLabel =  'Online';
             </div>
         </form>
         <!-- /.search form -->
-        <?php echo Menu::widget([
-                'options' => $menuOptions,
-                'items' => $menuItems,
-            ]
-        ); ?>
+        <nav class="mt-2">
+            <?php echo Menu::widget([
+                    'options' => $menuOptions,
+                    'items' => $menuItems,
+                ]
+            ); ?>
+        </nav>
     </section>
 </aside>
