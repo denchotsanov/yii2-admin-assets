@@ -53,8 +53,8 @@ AdminAsset::register($this);
         <?php echo $this->render('_header', ['directoryAsset' => $directoryAsset]); ?>
         <?php echo $this->render('_leftSide', ['directoryAsset' => $directoryAsset]); ?>
         <?php echo $this->render('_content', ['content' => $content]); ?>
-        <?php echo $this->render('_footer'); ?>
         <?php echo $this->render('_rightSlide'); ?>
+        <?php echo $this->render('_footer'); ?>
     </div>
     <?php $this->endBody(); ?>
     </body>
