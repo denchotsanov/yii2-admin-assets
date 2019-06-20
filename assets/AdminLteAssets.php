@@ -41,7 +41,6 @@ class AdminLteAssets extends BaseAdminLteAsset
         'plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css',
         'plugins/icheck-bootstrap/icheck-bootstrap.min.css',
         'plugins/jqvmap/jqvmap.min.css',
-        'plugins/jqvmap/jqvmap.min.css',
         'plugins/overlayScrollbars/css/OverlayScrollbars.min.css',
         'plugins/daterangepicker/daterangepicker.css',
         'plugins/summernote/summernote-bs4.css',
