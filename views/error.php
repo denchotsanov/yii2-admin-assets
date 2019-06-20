@@ -20,6 +20,7 @@ use yii\helpers\Html;
 
 $this->title = $name;
 $textColor = $exception->statusCode === 404 ? "text-warning" : "text-danger";
+$btnColor = $exception->statusCode === 404 ? "btn-warning" : "btn-danger";
 ?>
 <section class="content">
 <div class="error-page">
@@ -37,7 +38,7 @@ $textColor = $exception->statusCode === 404 ? "text-warning" : "text-danger";
                 <input type="text" name="search" class="form-control" placeholder="Search">
 
                 <div class="input-group-append">
-                    <button type="submit" name="submit" class="btn btn-danger"><i class="fas fa-search"></i>
+                    <button type="submit" name="submit" class="btn <?= $btnColor; ?>"><i class="fas fa-search"></i>
                     </button>
                 </div>
             </div>
