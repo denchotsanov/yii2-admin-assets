@@ -19,7 +19,7 @@
 use yii\helpers\Html;
 
 $this->title = $name;
-$textColor = $exception->statusCode === 404 ? "text-yellow" : "text-danger";
+$textColor = $exception->statusCode === 404 ? "text-warning" : "text-danger";
 ?>
 <section class="content">
 <div class="error-page">
