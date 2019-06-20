@@ -1,0 +1,8 @@
+
+.input-group.has-error {
+    margin-bottom: 2rem !important;
+}
+.input-group .help-block {
+    position: absolute;
+    bottom: -2.5rem;
+}
