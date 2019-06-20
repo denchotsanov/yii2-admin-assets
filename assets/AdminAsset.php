@@ -17,10 +17,11 @@ class AdminAsset extends BaseAdminAsset
 {
     public $sourcePath = '@vendor/denchotsanov/yii2-admin-assets/src';
     public $css = [
-
+        'css/admin.css'
     ];
     public $js = [
         'js/admin.js'
+
     ];
     public $depends = [
         'denchotsanov\assets\AdminLteAssets',
