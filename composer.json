@@ -16,7 +16,7 @@
         "fxp/composer-asset-plugin":"^1.4.0",
         "yiisoft/yii2": "^2.0.15",
         "yiisoft/yii2-bootstrap": "^2.0",
-        "almasaeed2010/adminlte": "v3.0.0-alpha.2"
+        "almasaeed2010/adminlte": "dev-v3-dev"
     },
     "autoload": {
         "psr-4": {
