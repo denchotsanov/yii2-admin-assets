@@ -6,11 +6,7 @@
 use yii\helpers\Html;
 
 $sortName = isset(Yii::$app->params['shortName']) ? Yii::$app->params['shortName'] : 'TS';
-$user = Yii::$app->user->identity;
-$avatar =  $directoryAsset . '/img/user2-160x160.jpg';
-$username = 'Alexander Pierce';
-$statusIcon = 'success';
-$statusLabel = 'Online';
+
 
 ?>
 <!-- Navbar -->

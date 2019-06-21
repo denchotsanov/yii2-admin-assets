@@ -6,7 +6,6 @@
 
 use denchotsanov\widgets\Menu;
 
-$menuOptions = ['class' => 'sidebar-menu tree', 'data-widget' => 'tree'];
 $menuItems = [
     ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
     ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
@@ -63,10 +62,12 @@ $username = 'Alexander Pierce';
         </div>
         <nav class="mt-2">
             <?php echo Menu::widget([
-                    'options' => $menuOptions,
+                    'encodeLabels' => false,
                     'items' => $menuItems,
                 ]
-            ); ?>
+            );
+
+            ?>
         </nav>
     </section>
 </aside>
