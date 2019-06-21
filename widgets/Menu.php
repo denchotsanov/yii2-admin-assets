@@ -19,18 +19,14 @@ use yii\helpers\Url;
 
 class Menu extends \yii\widgets\Menu
 {
-    public $linkTemplate = '<a href="{url}">{icon} {label}</a>';
-
-    public $labelTemplate = '<span>{label}</span>';
-    public $submenuTemplate = "\n<ul class='treeview-menu' {show}>\n{items}\n</ul>\n";
+    public $linkTemplate = '<a class="nav-link{active}" href="{url}">{icon} {label}</a>';
+    public $itemOptions = ['class' => 'nav-item'];
+    public $labelTemplate = '<p>{label}</p>';
+    public $submenuTemplate = "\n<ul class='nav nav-treeview' {show}>\n{items}\n</ul>\n";
     public $activateParents = true;
-    public $defaultIconHtml = '<i class="fa fa-circle-o"></i> ';
-    public $options = ['class' => 'nav nav-pills nav-sidebar flex-column', 'data-widget' => 'tree'];
-
-    public static $iconClassPrefix = 'fa fa-';
+    public $options = ['class' => 'nav nav-pills nav-sidebar flex-column', 'data-widget' => 'treeview', 'role' => 'menu', 'data-accordion' => 'false'];
     private $noDefaultAction;
     private $noDefaultRoute;
-
     /**
      * Renders the menu.
      */
@@ -61,32 +57,30 @@ class Menu extends \yii\widgets\Menu
             echo Html::tag($tag, $this->renderItems($items), $options);
         }
     }
-
     /**
      * @inheritdoc
      */
     protected function renderItem($item)
     {
         if (isset($item['items'])) {
-            $labelTemplate = '<a href="{url}">{icon} {label} <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>';
-            $linkTemplate = '<a href="{url}">{icon} {label} <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>';
+            $labelTemplate = '<a class="nav-link{active}" href="{url}">{icon} {label} <p><i class="right fa fa-angle-left"></i></p></a>';
+            $linkTemplate = '<a class="nav-link{active}" href="{url}">{icon} {label} <p><i class="right fa fa-angle-left"></i></p></a>';
         } else {
             $labelTemplate = $this->labelTemplate;
             $linkTemplate = $this->linkTemplate;
         }
         $replacements = [
             '{label}' => strtr($this->labelTemplate, ['{label}' => $item['label'],]),
-            '{icon}' => empty($item['icon']) ? $this->defaultIconHtml
-                : '<i class="' . static::$iconClassPrefix . $item['icon'] . '"></i> ',
+            '{icon}' => empty($item['icon']) ? ''
+                : '<i class="nav-icon ' . $item['icon'] . '"></i> ',
             '{url}' => isset($item['url']) ? Url::to($item['url']) : 'javascript:void(0);',
+            '{active}' => $item['active'] ? ' ' . $this->activeCssClass : '',
         ];
         $template = ArrayHelper::getValue($item, 'template', isset($item['url']) ? $linkTemplate : $labelTemplate);
         return strtr($template, $replacements);
     }
-
     /**
-     * Render all items
-     *
+     * Recursively renders the menu items (without the container tag).
      * @param array $items the menu items to be rendered recursively
      * @return string the rendering result
      */
@@ -100,6 +94,9 @@ class Menu extends \yii\widgets\Menu
             $class = [];
             if ($item['active']) {
                 $class[] = $this->activeCssClass;
+                if (!empty($item['items'])) {
+                    $class[] = 'menu-open';
+                }
             }
             if ($i === 0 && $this->firstItemCssClass !== null) {
                 $class[] = $this->firstItemCssClass;
@@ -121,16 +118,15 @@ class Menu extends \yii\widgets\Menu
                     '{items}' => $this->renderItems($item['items']),
                 ]);
                 if (isset($options['class'])) {
-                    $options['class'] .= ' treeview';
+                    $options['class'] .= ' has-treeview';
                 } else {
-                    $options['class'] = 'treeview';
+                    $options['class'] = 'has-treeview';
                 }
             }
             $lines[] = Html::tag($tag, $menu, $options);
         }
         return implode("\n", $lines);
     }
-
     /**
      * @inheritdoc
      */
@@ -170,7 +166,6 @@ class Menu extends \yii\widgets\Menu
         }
         return array_values($items);
     }
-
     /**
      * Checks whether a menu item is active.
      * This is done by checking if [[route]] and [[params]] match that specified in the `url` option of the menu item.
@@ -185,7 +180,7 @@ class Menu extends \yii\widgets\Menu
     {
         if (isset($item['url']) && is_array($item['url']) && isset($item['url'][0])) {
             $route = $item['url'][0];
-            if (isset($route[0]) && $route[0] !== '/' && Yii::$app->controller) {
+            if ($route[0] !== '/' && Yii::$app->controller) {
                 $route = ltrim(Yii::$app->controller->module->getUniqueId() . '/' . $route, '/');
             }
             $route = ltrim($route, '/');
