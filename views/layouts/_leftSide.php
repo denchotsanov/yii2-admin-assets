@@ -6,38 +6,22 @@
 
 use denchotsanov\widgets\Menu;
 
-$menuItems = [
+$menuItems = array(Yii::$app->params['mainMenu'],
+    [
     ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
-    ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
-    ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],
+    ['label' => 'Gii', 'icon' => 'fas fa-file-code-o', 'url' => ['/gii']],
+    ['label' => 'Debug', 'icon' => 'fas fa-dashboard', 'url' => ['/debug']],
     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
     [
         'label' => 'Some tools',
-        'icon' => 'share',
+        'icon' => 'fas fa-share',
         'url' => '#',
         'items' => [
-            ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii'],],
-            ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug'],],
-            [
-                'label' => 'Level One',
-                'icon' => 'circle-o',
-                'url' => '#',
-                'items' => [
-                    ['label' => 'Level Two', 'icon' => 'circle-o', 'url' => '#',],
-                    [
-                        'label' => 'Level Two',
-                        'icon' => 'circle-o',
-                        'url' => '#',
-                        'items' => [
-                            ['label' => 'Level Three', 'icon' => 'circle-o', 'url' => '#',],
-                            ['label' => 'Level Three', 'icon' => 'circle-o', 'url' => '#',],
-                        ],
-                    ],
-                ],
-            ],
+            ['label' => 'Gii', 'icon' => 'fas fa-file-code-o', 'url' => ['/gii'],],
+            ['label' => 'Debug', 'icon' => 'fas fa-dashboard', 'url' => ['/debug'],]
         ],
     ],
-];
+]);
 
 $user = Yii::$app->user->identity;
 $avatar = $directoryAsset . '/img/user2-160x160.jpg';
