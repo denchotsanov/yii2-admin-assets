@@ -58,6 +58,11 @@ class AdminLteAssets extends BaseAdminLteAsset
     public $skin = '_all-skins';
     public $layoutOption = 'sidebar-mini';
 
+
+    public $user = null;
+    public $name = '';
+    public $avatar = '';
+
     /**
      * @inheritdoc
      */
