@@ -6,7 +6,7 @@
 
 use denchotsanov\widgets\Menu;
 
-$menuItems = array(Yii::$app->params['mainMenu'],
+$menuItems = array_merge(Yii::$app->params['mainMenu'],
     [
     ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
     ['label' => 'Gii', 'icon' => 'fas fa-file-code-o', 'url' => ['/gii']],
