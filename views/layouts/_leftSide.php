@@ -9,16 +9,16 @@ use denchotsanov\widgets\Menu;
 $menuItems = array_merge(Yii::$app->params['mainMenu'],
     [
     ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
-    ['label' => 'Gii', 'icon' => 'fas fa-file-code-o', 'url' => ['/gii']],
-    ['label' => 'Debug', 'icon' => 'fas fa-dashboard', 'url' => ['/debug']],
+    ['label' => 'Gii', 'icon' => 'fas fa-file-code', 'url' => ['/gii']],
+    ['label' => 'Debug', 'icon' => 'fas fa-tachometer-alt', 'url' => ['/debug']],
     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
     [
         'label' => 'Some tools',
         'icon' => 'fas fa-share',
         'url' => '#',
         'items' => [
-            ['label' => 'Gii', 'icon' => 'fas fa-file-code-o', 'url' => ['/gii'],],
-            ['label' => 'Debug', 'icon' => 'fas fa-dashboard', 'url' => ['/debug'],]
+            ['label' => 'Gii', 'icon' => 'fas fa-file-code', 'url' => ['/gii'],],
+            ['label' => 'Debug', 'icon' => 'fas fa-tachometer-alt', 'url' => ['/debug'],]
         ],
     ],
 ]);
