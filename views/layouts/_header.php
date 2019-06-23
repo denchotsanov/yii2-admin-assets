@@ -128,12 +128,12 @@ $user = Yii::$app->user->identity;
             <a class="nav-link" data-toggle="dropdown" href="#">
                 <img src="<?php // echo $profile->getAvatarUrl(20) ?>" class="img-avatar"
                      alt="admin@bootstrapmaster.com">
-                <span class="d-md-down-none"><?= $user->username ?></span>
+                <span class="d-md-down-none"><?= $user->email; ?></span>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 <?= Html::beginForm(['/logout'], 'post')
                 . Html::submitButton(
-                    Yii::t('app', 'Logout') . '(' . Yii::$app->user->identity->username . ')',
+                    Yii::t('app', 'Logout') . '(' . Yii::$app->user->identity->email . ')',
                     ['class' => 'dropdown-item btn btn-link logout']
                 )
                 . Html::endForm(); ?>
