@@ -6,7 +6,7 @@
 
 use denchotsanov\widgets\Menu;
 
-$menuItems = array_merge(Yii::$app->params['mainMenu'],
+$menuItems = array_merge( Yii::$app->params['mainMenu'],
     [
     ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
     ['label' => 'Gii', 'icon' => 'fas fa-file-code', 'url' => ['/gii']],
@@ -24,8 +24,8 @@ $menuItems = array_merge(Yii::$app->params['mainMenu'],
 ]);
 
 $user = Yii::$app->user->identity;
-$avatar = $directoryAsset . '/img/user2-160x160.jpg';
-$username = 'Alexander Pierce';
+$avatar = $directoryAsset . 'dist/img/user2-160x160.jpg';
+$username = $user->username ;
 ?>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <section class="sidebar">

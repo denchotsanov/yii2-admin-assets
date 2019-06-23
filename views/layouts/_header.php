@@ -7,7 +7,8 @@ use yii\helpers\Html;
 
 $sortName = isset(Yii::$app->params['shortName']) ? Yii::$app->params['shortName'] : 'TS';
 
-
+$user = Yii::$app->user->identity;
+$profile = $user->profile;
 ?>
 <!-- Navbar -->
 <nav class="main-header navbar navbar-expand navbar-white navbar-light border-bottom">
@@ -48,7 +49,7 @@ $sortName = isset(Yii::$app->params['shortName']) ? Yii::$app->params['shortName
                 <a href="#" class="dropdown-item">
                     <!-- Message Start -->
                     <div class="media">
-                        <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                        <img src="<?= $directoryAsset ?>/dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
                         <div class="media-body">
                             <h3 class="dropdown-item-title">
                                 Brad Diesel
@@ -123,11 +124,30 @@ $sortName = isset(Yii::$app->params['shortName']) ? Yii::$app->params['shortName
                 <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
             </div>
         </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+                <img src="<?php // echo $profile->getAvatarUrl(20) ?>" class="img-avatar"
+                     alt="admin@bootstrapmaster.com">
+                <span class="d-md-down-none"><?= $user->username ?></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <?= Html::beginForm(['/logout'], 'post')
+                . Html::submitButton(
+                    Yii::t('app', 'Logout') . '(' . Yii::$app->user->identity->username . ')',
+                    ['class' => 'dropdown-item btn btn-link logout']
+                )
+                . Html::endForm(); ?>
+            </div>
+        </li>
         <li class="nav-item">
             <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#">
                 <i class="fas fa-th-large"></i>
             </a>
         </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+
     </ul>
 </nav>
 <!-- /.navbar -->
