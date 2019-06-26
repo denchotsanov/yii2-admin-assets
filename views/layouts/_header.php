@@ -6,7 +6,6 @@
 use yii\helpers\Html;
 
 $sortName = isset(Yii::$app->params['shortName']) ? Yii::$app->params['shortName'] : 'TS';
-
 $user = Yii::$app->user->identity;
 ?>
 <!-- Navbar -->
@@ -126,14 +125,13 @@ $user = Yii::$app->user->identity;
 
         <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
-                <img src="<?php // echo $profile->getAvatarUrl(20) ?>" class="img-avatar"
-                     alt="admin@bootstrapmaster.com">
-                <span class="d-md-down-none"><?= $user->email; ?></span>
+                <img src="<?php  echo $user->avatarUrl; ?>" class="img-avatar" alt="admin@bootstrapmaster.com">
+                <span class="d-md-down-none"><?= $user->username; ?></span>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 <?= Html::beginForm(['/logout'], 'post')
                 . Html::submitButton(
-                    Yii::t('app', 'Logout') . '(' . Yii::$app->user->identity->email . ')',
+                    Yii::t('app', 'Logout') . '(' . $user->username. ')',
                     ['class' => 'dropdown-item btn btn-link logout']
                 )
                 . Html::endForm(); ?>

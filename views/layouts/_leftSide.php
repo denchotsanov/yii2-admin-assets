@@ -24,7 +24,7 @@ $menuItems = array_merge( Yii::$app->params['mainMenu'],
 ]);
 
 $user = Yii::$app->user->identity;
-$avatar = $directoryAsset . 'dist/img/user2-160x160.jpg';
+$avatar = $user->avatarUrl;
 $username = $user->username ;
 ?>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
