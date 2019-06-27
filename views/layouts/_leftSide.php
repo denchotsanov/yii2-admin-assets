@@ -23,7 +23,7 @@ $menuItems = array_merge( Yii::$app->params['mainMenu'],
     ],
 ]);
 
-$user = Yii::$app->user->identity;
+$user = Yii::$app->getUser()->getIdentity();
 $profile = $user->profile;
 ?>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">

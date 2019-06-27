@@ -6,7 +6,8 @@
 use yii\helpers\Html;
 
 $sortName = isset(Yii::$app->params['shortName']) ? Yii::$app->params['shortName'] : 'TS';
-$user = Yii::$app->user->identity;
+
+$user = Yii::$app->getUser()->getIdentity();
 $profile = $user->profile;
 ?>
 <!-- Navbar -->
