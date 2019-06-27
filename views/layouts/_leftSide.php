@@ -24,8 +24,7 @@ $menuItems = array_merge( Yii::$app->params['mainMenu'],
 ]);
 
 $user = Yii::$app->user->identity;
-$avatar = $user->avatarUrl;
-$username = $user->username ;
+$profile = $user->profile;
 ?>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <section class="sidebar">
@@ -38,10 +37,10 @@ $username = $user->username ;
         <!-- Sidebar user panel -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-                <img src="<?php echo $avatar; ?>" class="img-circle elevation-2" alt="User Image"/>
+                <img src="<?= $profile->getAvatarUrl(20) ?>" class="img-circle elevation-2" alt="User Image"/>
             </div>
             <div class="info">
-                <a href="#" class="d-block"><?php echo $username; ?></a>
+                <a href="#" class="d-block"><?= $user->username; ?></a>
             </div>
         </div>
         <nav class="mt-2">
