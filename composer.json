@@ -3,19 +3,20 @@
     "description": "AdminLTE Admin panel theme asset bundle for Yii2 ",
     "type": "yii2-extension",
     "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "authors": [
         {
             "name": "Dencho Tsanov",
             "email": "tsanov.dencho@gmail.com"
         }
     ],
-    "prefer-stable": true,
     "require": {
         "php": "^7.0",
         "fxp/composer-asset-plugin":"^1.4.0",
         "yiisoft/yii2": "^2.0.15",
         "yiisoft/yii2-bootstrap": "^2.0",
-        "almasaeed2010/adminlte": "^2.4"
+        "almasaeed2010/adminlte": "dev-v3-dev"
     },
     "autoload": {
         "psr-4": {

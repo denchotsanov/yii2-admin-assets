@@ -34,12 +34,20 @@ use yii\web\AssetBundle as BaseAdminLteAsset;
 class AdminLteAssets extends BaseAdminLteAsset
 {
 
-    public $sourcePath = '@vendor/almasaeed2010/adminlte/dist';
+    public $sourcePath = '@vendor/almasaeed2010/adminlte';
     public $css = [
-        'css/AdminLTE.min.css',
+        'dist/css/adminlte.min.css',
+        'plugins/fontawesome-free/css/all.min.css',
+        'plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css',
+        'plugins/icheck-bootstrap/icheck-bootstrap.min.css',
+        'plugins/jqvmap/jqvmap.min.css',
+        'plugins/overlayScrollbars/css/OverlayScrollbars.min.css',
+        'plugins/daterangepicker/daterangepicker.css',
+        'plugins/summernote/summernote-bs4.css',
     ];
     public $js = [
-        'js/adminlte.min.js'
+        'dist/js/adminlte.min.js',
+
     ];
     public $depends = [
         'yii\web\YiiAsset',
@@ -49,6 +57,11 @@ class AdminLteAssets extends BaseAdminLteAsset
 
     public $skin = '_all-skins';
     public $layoutOption = 'sidebar-mini';
+
+
+    public $user = null;
+    public $name = '';
+    public $avatar = '';
 
     /**
      * @inheritdoc
@@ -60,7 +73,7 @@ class AdminLteAssets extends BaseAdminLteAsset
             if (('_all-skins' !== $this->skin) && (strpos($this->skin, 'skin-') !== 0)) {
                 throw new Exception('Invalid skin specified');
             }
-            $this->css[] = sprintf('css/skins/%s.min.css', $this->skin);
+         //   $this->css[] = sprintf('css/skins/%s.min.css', $this->skin);
         }
         parent::init();
     }

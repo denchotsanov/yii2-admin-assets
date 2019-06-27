@@ -1,0 +1,8 @@
+
+.login-page .input-group.has-error {
+    margin-bottom: 2rem !important;
+}
+.login-page .input-group .help-block {
+    position: absolute;
+    bottom: -2.5rem;
+}
