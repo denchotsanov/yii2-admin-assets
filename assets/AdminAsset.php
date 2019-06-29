@@ -9,7 +9,7 @@
  *
  */
 
-namespace denchotsanov\assets;
+namespace denchotsanov\assets\assets;
 
 use yii\web\AssetBundle as BaseAdminAsset;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace denchotsanov\helpers;
+namespace denchotsanov\assets\helpers;
 
-use denchotsanov\assets\AdminLteAssets;
+use denchotsanov\assets\assets\AdminLteAssets;
 
 class ThemeHelper
 {

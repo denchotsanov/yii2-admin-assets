@@ -1,6 +1,6 @@
 <?php
 
-namespace denchotsanov\assets;
+namespace denchotsanov\assets\assets;
 
 /**
  *  BODY TAG OPTIONS:
