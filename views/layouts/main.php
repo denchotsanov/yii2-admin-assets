@@ -23,8 +23,8 @@
  */
 
 
-use denchotsanov\assets\AdminAsset;
-use denchotsanov\helpers\ThemeHelper;
+use denchotsanov\assets\assets\AdminAsset;
+use denchotsanov\assets\helpers\ThemeHelper;
 use yii\helpers\Html;
 
 $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte');

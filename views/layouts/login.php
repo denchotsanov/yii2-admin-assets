@@ -1,6 +1,6 @@
 <?php
 
-use denchotsanov\assets\AdminAsset;
+use denchotsanov\assets\assets\AdminAsset;
 use yii\helpers\Html;
 
 /* @var $this \yii\web\View */

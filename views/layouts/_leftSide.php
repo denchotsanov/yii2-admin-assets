@@ -4,7 +4,7 @@
  * @var string $directoryAsset
  */
 
-use denchotsanov\widgets\Menu;
+use denchotsanov\assets\widgets\Menu;
 
 $menuItems = array_merge( Yii::$app->params['mainMenu'],
     [
