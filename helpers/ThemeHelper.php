@@ -13,7 +13,7 @@ class ThemeHelper
      */
     public static function bodyClass(string $bodyClass=''){
         /** @var AdminLteAssets $bundle */
-        $bundle = \Yii::$app->assetManager->getBundle('denchotsanov\assets\AdminLteAssets');
+        $bundle = \Yii::$app->assetManager->getBundle('denchotsanov\assets\assets\AdminLteAssets');
         return $bodyClass.' '.$bundle->skin.' '.$bundle->layoutOption;
     }
 }
