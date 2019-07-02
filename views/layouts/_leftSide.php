@@ -5,6 +5,7 @@
  */
 
 use denchotsanov\assets\widgets\Menu;
+use yii\bootstrap4\Html;
 
 $menuItems = array_merge( Yii::$app->params['mainMenu'],
     [
@@ -58,6 +59,6 @@ $profile = $user->profile;
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
     </li>
     <li class="nav-item d-sm-inline-block">
-        <?= Html::a(Yii::t('backend', 'Home'), ['/dashboard'], ['class' => 'nav-link']) ?>
+        <?= Html::a(Yii::t('app', 'Home'), ['/dashboard'], ['class' => 'nav-link']) ?>
     </li>
 </ul>
