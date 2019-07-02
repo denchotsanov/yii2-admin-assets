@@ -7,12 +7,12 @@
 use denchotsanov\assets\widgets\Menu;
 use yii\bootstrap4\Html;
 
+$items = [
+
+];
 $menuItems = array_merge( Yii::$app->params['mainMenu'],
     [
     ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
-    ['label' => 'Gii', 'icon' => 'fas fa-file-code', 'url' => ['/gii']],
-    ['label' => 'Debug', 'icon' => 'fas fa-tachometer-alt', 'url' => ['/debug']],
-    ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
     [
         'label' => 'Some tools',
         'icon' => 'fas fa-share',
