@@ -10,19 +10,29 @@ use yii\bootstrap4\Html;
 $items = [
 
 ];
-$menuItems = array_merge( Yii::$app->params['mainMenu'],
+$menuItems = array_merge(Yii::$app->params['mainMenu'],
     [
-    ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
-    [
-        'label' => 'Some tools',
-        'icon' => 'fas fa-share',
-        'url' => '#',
-        'items' => [
-            ['label' => 'Gii', 'icon' => 'fas fa-file-code', 'url' => ['/gii'],],
-            ['label' => 'Debug', 'icon' => 'fas fa-tachometer-alt', 'url' => ['/debug'],]
+        [
+            'label' => 'User',
+            'icon' => 'fas fa-users',
+            'url' => '#',
+            'items' => [
+                ['label' => 'List', 'icon' => 'fas fa-users', 'url' => ['/user/admin']],
+                ['label' => 'Add', 'icon' => 'fas fa-user-plus', 'url' => ['/user/admin/create']],
+            ],
+            'visable'=>Yii::$app->getUser()->getIdentity()->isAdmin(),
         ],
-    ],
-]);
+        ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
+        [
+            'label' => 'Some tools',
+            'icon' => 'fas fa-share',
+            'url' => '#',
+            'items' => [
+                ['label' => 'Gii', 'icon' => 'fas fa-file-code', 'url' => ['/gii'],],
+                ['label' => 'Debug', 'icon' => 'fas fa-tachometer-alt', 'url' => ['/debug'],]
+            ],
+        ],
+    ]);
 
 $user = Yii::$app->getUser()->getIdentity();
 $profile = $user->profile;
@@ -30,7 +40,8 @@ $profile = $user->profile;
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <section class="sidebar">
         <a href="#" class="brand-link">
-            <img src="<?= $directoryAsset ?>/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+            <img src="<?= $directoryAsset ?>/dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
+                 class="brand-image img-circle elevation-3"
                  style="opacity: .8">
             <span class="brand-text font-weight-light"><?= Yii::$app->name; ?></span>
         </a>
