@@ -47,7 +47,6 @@ class AdminLteAssets extends BaseAdminLteAsset
     ];
     public $js = [
         'dist/js/adminlte.min.js',
-
     ];
     public $depends = [
         'yii\web\YiiAsset',
@@ -55,9 +54,8 @@ class AdminLteAssets extends BaseAdminLteAsset
         'yii\bootstrap\BootstrapPluginAsset',
     ];
 
-    public $skin = '_all-skins';
+    public $skin = '';
     public $layoutOption = 'sidebar-mini';
-
 
     public $user = null;
     public $name = '';

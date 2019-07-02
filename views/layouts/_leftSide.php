@@ -28,7 +28,6 @@ $profile = $user->profile;
 ?>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <section class="sidebar">
-
         <a href="#" class="brand-link">
             <img src="<?= $directoryAsset ?>/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                  style="opacity: .8">
@@ -54,3 +53,11 @@ $profile = $user->profile;
         </nav>
     </section>
 </aside>
+<ul class="navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
+    </li>
+    <li class="nav-item d-sm-inline-block">
+        <?= Html::a(Yii::t('backend', 'Home'), ['/dashboard'], ['class' => 'nav-link']) ?>
+    </li>
+</ul>
