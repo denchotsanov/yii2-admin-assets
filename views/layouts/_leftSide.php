@@ -20,7 +20,7 @@ $menuItems = array_merge(Yii::$app->params['mainMenu'],
                 ['label' => 'List', 'icon' => 'fas fa-users', 'url' => ['/user/admin']],
                 ['label' => 'Add', 'icon' => 'fas fa-user-plus', 'url' => ['/user/admin/create']],
             ],
-            'visable'=>Yii::$app->getUser()->getIdentity()->isAdmin(),
+            'visable'=>Yii::$app->getUser()->getIdentity()->isAdmin,
         ],
         ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
         [
