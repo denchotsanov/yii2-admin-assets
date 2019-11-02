@@ -9,7 +9,7 @@
  *
  */
 
-namespace denchotsanov\assets;
+namespace denchotsanov\assets\assets;
 
 use yii\web\AssetBundle as BaseAdminAsset;
 
@@ -24,6 +24,6 @@ class AdminAsset extends BaseAdminAsset
 
     ];
     public $depends = [
-        'denchotsanov\assets\AdminLteAssets',
+        'denchotsanov\assets\assets\AdminLteAssets',
     ];
 }

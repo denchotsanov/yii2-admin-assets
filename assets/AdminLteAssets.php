@@ -1,6 +1,6 @@
 <?php
 
-namespace denchotsanov\assets;
+namespace denchotsanov\assets\assets;
 
 /**
  *  BODY TAG OPTIONS:
@@ -47,17 +47,15 @@ class AdminLteAssets extends BaseAdminLteAsset
     ];
     public $js = [
         'dist/js/adminlte.min.js',
-
     ];
     public $depends = [
         'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
-        'yii\bootstrap\BootstrapPluginAsset',
+        'yii\bootstrap4\BootstrapAsset',
+        'yii\bootstrap4\BootstrapPluginAsset',
     ];
 
-    public $skin = '_all-skins';
+    public $skin = '';
     public $layoutOption = 'sidebar-mini';
-
 
     public $user = null;
     public $name = '';

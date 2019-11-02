@@ -1,7 +1,7 @@
 <?php
 
 
-namespace denchotsanov\widgets;
+namespace denchotsanov\assets\widgets;
 
 use Yii;
 /**

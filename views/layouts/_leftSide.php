@@ -4,33 +4,44 @@
  * @var string $directoryAsset
  */
 
-use denchotsanov\widgets\Menu;
+use denchotsanov\assets\widgets\Menu;
+use yii\bootstrap4\Html;
 
-$menuItems = array_merge( Yii::$app->params['mainMenu'],
+$items = [
+
+];
+$menuItems = array_merge(Yii::$app->params['mainMenu'],
     [
-    ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
-    ['label' => 'Gii', 'icon' => 'fas fa-file-code', 'url' => ['/gii']],
-    ['label' => 'Debug', 'icon' => 'fas fa-tachometer-alt', 'url' => ['/debug']],
-    ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
-    [
-        'label' => 'Some tools',
-        'icon' => 'fas fa-share',
-        'url' => '#',
-        'items' => [
-            ['label' => 'Gii', 'icon' => 'fas fa-file-code', 'url' => ['/gii'],],
-            ['label' => 'Debug', 'icon' => 'fas fa-tachometer-alt', 'url' => ['/debug'],]
+        [
+            'label' => 'User',
+            'icon' => 'fas fa-users',
+            'url' => '#',
+            'items' => [
+                ['label' => 'List', 'icon' => 'fas fa-users', 'url' => ['/user/admin']],
+                ['label' => 'Add', 'icon' => 'fas fa-user-plus', 'url' => ['/user/admin/create']],
+            ],
+            'visable'=>Yii::$app->getUser()->getIdentity()->isAdmin,
         ],
-    ],
-]);
+        ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
+        [
+            'label' => 'Some tools',
+            'icon' => 'fas fa-share',
+            'url' => '#',
+            'items' => [
+                ['label' => 'Gii', 'icon' => 'fas fa-file-code', 'url' => ['/gii'],],
+                ['label' => 'Debug', 'icon' => 'fas fa-tachometer-alt', 'url' => ['/debug'],]
+            ],
+        ],
+    ]);
 
 $user = Yii::$app->getUser()->getIdentity();
 $profile = $user->profile;
 ?>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <section class="sidebar">
-
         <a href="#" class="brand-link">
-            <img src="<?= $directoryAsset ?>/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+            <img src="<?= $directoryAsset ?>/dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
+                 class="brand-image img-circle elevation-3"
                  style="opacity: .8">
             <span class="brand-text font-weight-light"><?= Yii::$app->name; ?></span>
         </a>
@@ -54,3 +65,11 @@ $profile = $user->profile;
         </nav>
     </section>
 </aside>
+<ul class="navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
+    </li>
+    <li class="nav-item d-sm-inline-block">
+        <?= Html::a(Yii::t('app', 'Home'), ['/dashboard'], ['class' => 'nav-link']) ?>
+    </li>
+</ul>

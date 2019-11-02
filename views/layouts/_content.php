@@ -4,7 +4,7 @@
  * @var string $content Return html content.
  */
 
-use denchotsanov\widgets\Alert;
+use denchotsanov\assets\widgets\Alert;
 use yii\helpers\Html;
 use yii\helpers\Inflector;
 use yii\widgets\Breadcrumbs;
