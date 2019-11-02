@@ -3,7 +3,7 @@
     "description": "AdminLTE Admin panel theme asset bundle for Yii2 ",
     "type": "yii2-extension",
     "license": "MIT",
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "authors": [
         {

@@ -36,6 +36,7 @@ class AdminLteAssets extends BaseAdminLteAsset
 
     public $sourcePath = '@vendor/almasaeed2010/adminlte';
     public $css = [
+        '//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700',
         'dist/css/adminlte.min.css',
         'plugins/fontawesome-free/css/all.min.css',
         'plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css',
