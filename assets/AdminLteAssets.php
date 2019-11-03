@@ -45,14 +45,14 @@ class AdminLteAssets extends BaseAdminLteAsset
         'plugins/overlayScrollbars/css/OverlayScrollbars.min.css',
         'plugins/daterangepicker/daterangepicker.css',
         'plugins/summernote/summernote-bs4.css',
-        'plugins/datatable-bs4/css/dataTables.bootstrap4.css'
+        'plugins/datatables-bs4/css/dataTables.bootstrap4.css'
     ];
     public $js = [
         'dist/js/adminlte.min.js',
         'plugins/toastr/toastr.min.js',
         'plugins/summernote/summernote-bs4.min.js',
-        'plugins/datatable-bs4/js/dataTables.bootstrap4.js',
-        'plugins/datatables/jquery.dataTable.js',
+        'plugins/datatables-bs4/js/dataTables.bootstrap4.js',
+        'plugins/datatables/jquery.dataTables.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
