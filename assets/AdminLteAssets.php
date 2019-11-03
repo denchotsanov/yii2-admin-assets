@@ -48,6 +48,7 @@ class AdminLteAssets extends BaseAdminLteAsset
     ];
     public $js = [
         'dist/js/adminlte.min.js',
+        'plugins/toastr/toastr.min.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
