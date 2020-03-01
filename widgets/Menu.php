@@ -21,7 +21,7 @@ class Menu extends \yii\widgets\Menu
 {
     public $linkTemplate = '<a class="nav-link{active}" href="{url}">{icon} {label}</a>';
     public $itemOptions = ['class' => 'nav-item'];
-    public $labelTemplate = '<p>{label}</p>';
+    public $labelTemplate = '{label}';
     public $submenuTemplate = "\n<ul class='nav nav-treeview' {show}>\n{items}\n</ul>\n";
     public $activateParents = true;
     public $options = ['class' => 'nav nav-pills nav-sidebar flex-column nav-child-indent', 'data-widget' => 'treeview', 'role' => 'menu', 'data-accordion' => 'false'];
