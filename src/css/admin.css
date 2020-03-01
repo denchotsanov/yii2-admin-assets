@@ -1,24 +1,23 @@
-
-.login-page .input-group .has-error {
-    margin-bottom: 2rem !important;
+.has-error .help-block,
+.has-error .control-label,
+.has-error .radio,
+.has-error .checkbox,
+.has-error .radio-inline,
+.has-error .checkbox-inline,
+.has-error.radio label,
+.has-error.checkbox label,
+.has-error.radio-inline label,
+.has-error.checkbox-inline label {
+    color: #a94442;
 }
-.login-page .input-group .help-block {
-    position: absolute;
-    bottom: -2.5rem;
+.has-error .form-control {
+    border-color: #a94442;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
-
-/*
-Custom Styles
-*/
-.navbar-fixed-top .content-wrapper {
-    padding-top: 3.5rem;
+.login-card-body .has-error .input-group .input-group-text {
+    color: #a94442;
 }
-
-.content {
-    margin-top: 1rem;
-}
-
-.app-justify-center {
-    display: flex;
-    min-height: 100vh;
+.has-error .input-group-text {
+    border: 1px solid #a94442;
 }
