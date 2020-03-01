@@ -24,7 +24,7 @@ class Menu extends \yii\widgets\Menu
     public $labelTemplate = '<p>{label}</p>';
     public $submenuTemplate = "\n<ul class='nav nav-treeview' {show}>\n{items}\n</ul>\n";
     public $activateParents = true;
-    public $options = ['class' => 'nav nav-pills nav-sidebar flex-column', 'data-widget' => 'treeview', 'role' => 'menu', 'data-accordion' => 'false'];
+    public $options = ['class' => 'nav nav-pills nav-sidebar flex-column nav-child-indent', 'data-widget' => 'treeview', 'role' => 'menu', 'data-accordion' => 'false'];
     private $noDefaultAction;
     private $noDefaultRoute;
     /**
