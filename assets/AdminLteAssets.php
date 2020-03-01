@@ -45,7 +45,8 @@ class AdminLteAssets extends BaseAdminLteAsset
         'plugins/overlayScrollbars/css/OverlayScrollbars.min.css',
         'plugins/daterangepicker/daterangepicker.css',
         'plugins/summernote/summernote-bs4.css',
-        'plugins/datatables-bs4/css/dataTables.bootstrap4.css'
+        'plugins/datatables-bs4/css/dataTables.bootstrap4.css',
+        'plugins/flag-icon-css/css/flag-icon.min.css',
     ];
     public $js = [
         'dist/js/adminlte.min.js',
