@@ -21,7 +21,3 @@
 .has-error .input-group-text {
     border: 1px solid #a94442;
 }
-
-.breadcrumb .breadcrumb-item::before {
-    content: ">";
-}
