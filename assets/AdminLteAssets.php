@@ -52,8 +52,8 @@ class AdminLteAssets extends BaseAdminLteAsset
         'dist/js/adminlte.min.js',
         'plugins/toastr/toastr.min.js',
         'plugins/summernote/summernote-bs4.min.js',
+        'plugins/datatables/jquery.dataTables.js',       
         'plugins/datatables-bs4/js/dataTables.bootstrap4.js',
-        'plugins/datatables/jquery.dataTables.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
